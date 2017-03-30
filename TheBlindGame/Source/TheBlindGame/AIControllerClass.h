@@ -2,20 +2,22 @@
 
 #pragma once
 
-#include "GameFramework/PlayerController.h"
-#include "PlayerControllerClass.generated.h"
+#include "AIController.h"
+#include "AIControllerClass.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class THEBLINDGAME_API APlayerControllerClass : public APlayerController
+class THEBLINDGAME_API AAIControllerClass : public AAIController
 {
 	GENERATED_BODY()
-
+	
+	
 public:
 	virtual void BeginPlay() override;
-	
+
 private:
 	APawn* GetControlledPawn();
+	APawn* GetPlayerPawn();
 };
