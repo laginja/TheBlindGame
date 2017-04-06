@@ -21,19 +21,4 @@ public:
 private:
 	APawn* GetControlledPawn();
 
-	// Ray-cast and grab AI if in reach
-	void Grab();
-
-	// return hit for first physics body in reach
-	const FHitResult GetFirstPhysicsBodyInReach();
-
-	// returns the reach line START of our LINE TRACE
-	FVector GetReachLineStart();
-
-	// returns the reach line END of our LINE TRACE
-	FVector GetReachLineEnd();
-
-	// how far the player can reach with LINE TRACE in cm
-	UPROPERTY(EditAnywhere)
-	float Reach = 100.f;
 };
