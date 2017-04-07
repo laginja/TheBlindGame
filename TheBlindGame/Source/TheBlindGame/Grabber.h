@@ -5,6 +5,7 @@
 #include "Components/ActorComponent.h"
 #include "Grabber.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FGrabSuccess);
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class THEBLINDGAME_API UGrabber : public UActorComponent
@@ -20,6 +21,9 @@ public:
 	
 	// Called every frame
 	virtual void TickComponent( float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction ) override;
+
+	UPROPERTY(BlueprintAssignable)
+	FGrabSuccess OnGrab;
 
 private:
 	// How far ahead of the player can we reach in cm

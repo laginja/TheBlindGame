@@ -23,6 +23,7 @@ void UGrabber::BeginPlay()
 	FindPhysicsHandleComponent();
 	SetupInputComponent();
 	
+	
 }
 
 void UGrabber::FindPhysicsHandleComponent()
@@ -64,7 +65,7 @@ void UGrabber::TickComponent( float DeltaTime, ELevelTick TickType, FActorCompon
 
 	{
 		// move the object that we're holding
-		PhysicsHandle->SetTargetLocation(GetReachLineEnd());
+		PhysicsHandle->SetTargetLocation(GetReachLineEnd());	
 	}
 }
 
@@ -85,6 +86,9 @@ void UGrabber::Grab()
 			ComponentToGrab->GetOwner()->GetActorLocation(),
 			true	// allow rotation
 		);
+		UE_LOG(LogTemp, Error, TEXT("Got the chicken"));
+
+		OnGrab.Broadcast();
 	}
 }
 
