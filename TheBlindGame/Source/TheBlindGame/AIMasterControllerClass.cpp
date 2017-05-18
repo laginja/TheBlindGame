@@ -10,7 +10,7 @@ void AAIMasterControllerClass::BeginPlay()
 
 	auto AIPawn = GetControlledPawn();
 
-	UE_LOG(LogTemp, Warning, TEXT("AI MasterController possesing: %s"), *(AIPawn->GetName()));
+	//UE_LOG(LogTemp, Warning, TEXT("AI MasterController possesing: %s"), *(AIPawn->GetName()));
 
 }
 

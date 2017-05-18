@@ -11,8 +11,8 @@ void AAIControllerClass::BeginPlay()
 	auto AIPawn = GetControlledPawn();
 	auto PlayerPawn = GetPlayerPawn();
 
-	UE_LOG(LogTemp, Warning, TEXT("AI Controller possesing: %s"), *(AIPawn->GetName()));
-	UE_LOG(LogTemp, Warning, TEXT("AI Controller looking at: %s"), *(PlayerPawn->GetName()));
+	//UE_LOG(LogTemp, Warning, TEXT("AI Controller possesing: %s"), *(AIPawn->GetName()));
+	//UE_LOG(LogTemp, Warning, TEXT("AI Controller looking at: %s"), *(PlayerPawn->GetName()));
 
 }
 
