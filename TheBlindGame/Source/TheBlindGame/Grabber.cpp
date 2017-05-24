@@ -85,7 +85,7 @@ void UGrabber::Grab()
 			ComponentToGrab->GetOwner()->GetActorLocation(),
 			true	// allow rotation
 		);
-		UE_LOG(LogTemp, Error, TEXT("Got the chicken"));
+		UE_LOG(LogTemp, Error, TEXT("Grab successfull"));
 
 		OnGrab.Broadcast();
 	}
